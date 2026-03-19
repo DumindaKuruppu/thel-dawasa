@@ -61,14 +61,22 @@ class _ScannerScreenState extends State<ScannerScreen> {
         }
       }
 
+      if (!mounted) return;
+      final langProvider = Provider.of<LanguageProvider>(
+        context,
+        listen: false,
+      );
+
       if (numberPlate != null) {
         _processResult(numberPlate);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text(
-              "Poddak hariyata allanna malli... can't see the plate!",
+          SnackBar(
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
+            content: Text(langProvider.getText('capture_error_text')),
           ),
         );
       }
@@ -119,7 +127,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
                     ? const CircularProgressIndicator(color: Colors.black)
                     : Text(
                         langProvider.getText('capture_btn_text'),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),

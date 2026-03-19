@@ -159,6 +159,10 @@ class ResultScreen extends StatelessWidget {
                           Add2Calendar.addEvent2Cal(event);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
+                              behavior: SnackBarBehavior.floating,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
                               content: Text(
                                 langProvider.getText('calendar_success'),
                               ),
@@ -176,6 +180,10 @@ class ResultScreen extends StatelessWidget {
                           );
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
+                              behavior: SnackBarBehavior.floating,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
                               content: Text(
                                 langProvider.getText('remind_success'),
                               ),
