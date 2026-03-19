@@ -32,7 +32,7 @@ class LanguageProvider with ChangeNotifier {
 
       'fuel_success_title': 'හුරේ....!\nඅද ඔයාට තෙල් ගහන්න පුළුවන් ',
       'fuel_success_description': 'යන්න, ගිහින් තෙල් ගහන් එන්න',
-      'fuel_fail_title': 'කණගාටුයි! හෙට ගහමු අපි තෙල්',
+      'fuel_fail_title': 'කණගාටුයි!\nඅද ඔයාට තෙල් ගහන්න බෑ',
       'fuel_fail_description': 'අද ඔයාට තෙල් නෑ. ගිහින් තේ එකක් බොන්න. ☕',
 
       'eligibility_dates': 'ඉදිරියට ඔබට තෙල් ගහන්න පුළුවන් දවස්',
@@ -45,6 +45,7 @@ class LanguageProvider with ChangeNotifier {
 
       'capture_btn_text': 'හරි ✅',
       'capture_error_text': 'හතලිස් ඇඳිරියද කොහෙද මට පේන්නෑ හරියට',
+      'finish': 'ඉවර කරන්න',
     },
     AppLanguage.tamil: {},
     AppLanguage.english: {},

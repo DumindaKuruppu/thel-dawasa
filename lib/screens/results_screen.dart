@@ -90,7 +90,7 @@ class ResultScreen extends StatelessWidget {
                           ? langProvider.getText('fuel_success_description')
                           : langProvider.getText('fuel_fail_description'),
                       textAlign: TextAlign.center,
-                      style: theme.textTheme.titleSmall,
+                      style: theme.textTheme.bodySmall,
                     ),
                   ],
                 ),
@@ -194,7 +194,7 @@ class ResultScreen extends StatelessWidget {
                   minimumSize: const Size(double.infinity, 60),
                 ),
                 onPressed: () => Navigator.pop(context),
-                child: const Text("FINISH"),
+                child: Text(langProvider.getText('finish')),
               ),
             ],
           ),
