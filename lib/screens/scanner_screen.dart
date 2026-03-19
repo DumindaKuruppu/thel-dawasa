@@ -22,7 +22,11 @@ class _ScannerScreenState extends State<ScannerScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = CameraController(widget.cameras[0], ResolutionPreset.high);
+    _controller = CameraController(
+      widget.cameras[0],
+      ResolutionPreset.high,
+      enableAudio: false, // Disables microphone access
+    );
     _controller.initialize().then((_) {
       if (!mounted) return;
       setState(() {});
